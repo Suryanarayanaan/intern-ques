@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main() {
+   int rem,num;
+   int arms=0,temp;
+   printf("enter a number:");
+   scanf("%d",&num);
+   temp=num;
+   while(num>0){
+       rem=num%10;
+       arms=arms+(rem*rem*rem);
+       num=num/10;
+   }
+   if(temp==arms){
+       printf("the number is armsstrong");
+   }
+   else{
+       printf("the number is not an armsstrong");
+   }
+   return 0;
+}
