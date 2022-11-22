@@ -1,9 +1,18 @@
 #include<stdio.h>
 #include<string.h>
-void main(){
+int main(){
     char string[100];
-    int i;
+    int i,alp=0;
     printf("enter the string:");
     gets(string);
-    printf("number of alphabets is %d",strlen(string));
+    printf("total count is %d\n",strlen(string));
+    while(string[i]!='\0'){
+        if((string[i]>='a' && string[i]<='z') || (string[i]>='A' && string[i]<='Z'))
+        {
+            alp++;
+        }
+        i++;
+    }
+    printf("the number of alphabets is %d",alp);
+    return 0;
 }
